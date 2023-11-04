@@ -83,9 +83,8 @@ fun NewsCard(article: Article, modifier: Modifier = Modifier) {
                 vertical = 6.dp
             ))
             Text(text = stringResource(id = article.title), maxLines = 4, overflow = TextOverflow.Ellipsis, style = MaterialTheme.typography.bodyMedium, modifier = Modifier.padding(
-                start = 16.dp,
-                end = 16.dp,
-                bottom = 8.dp
+                horizontal = 16.dp,
+                vertical = 6.dp
             ))
             Divider(color = Color.White)
             Text(text = article.updated, style = MaterialTheme.typography.labelMedium, modifier = Modifier.padding(
