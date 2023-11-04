@@ -6,7 +6,6 @@ import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -52,7 +51,7 @@ class MainActivity : ComponentActivity() {
     }
 }
 
-@Preview
+
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun NewsAppLayout() {
@@ -73,8 +72,8 @@ fun NewsAppLayout() {
 
 @Composable
 fun NewsCard(article: Article, modifier: Modifier = Modifier) {
-    Card() {
-        Column (){
+    Card {
+        Column {
             Image(painter = painterResource(article.imageResourceId), contentDescription = null,
                 modifier
                     .height(150.dp)
@@ -84,8 +83,9 @@ fun NewsCard(article: Article, modifier: Modifier = Modifier) {
                 vertical = 6.dp
             ))
             Text(text = stringResource(id = article.title), maxLines = 4, overflow = TextOverflow.Ellipsis, style = MaterialTheme.typography.bodyMedium, modifier = Modifier.padding(
-                horizontal = 12.dp,
-                vertical = 8.dp
+                start = 16.dp,
+                end = 16.dp,
+                bottom = 8.dp
             ))
             Divider(color = Color.White)
             Text(text = article.updated, style = MaterialTheme.typography.labelMedium, modifier = Modifier.padding(
@@ -114,6 +114,14 @@ fun NewsCardPreviewDark() {
 @Composable
 fun NewsLayoutPreviewDark() {
     HW5ClickbaitTheme (darkTheme = true) {
+        NewsAppLayout()
+    }
+}
+
+@Preview
+@Composable
+fun NewsLayoutPreview() {
+    HW5ClickbaitTheme (darkTheme = false) {
         NewsAppLayout()
     }
 }

@@ -27,15 +27,15 @@ val Typography = Typography(
         fontFamily = JosephSans,
         fontWeight = FontWeight.Bold,
         fontSize = 14.sp,
-        lineHeight = 20.sp,
+        lineHeight = 18.sp,
         letterSpacing = 0.5.sp
     ),
     titleLarge = TextStyle(
         fontFamily = JosephSans,
         fontWeight = FontWeight.Bold,
-        fontSize = 18.sp,
+        fontSize = 14.sp,
         lineHeight = 22.sp,
-        letterSpacing = 0.5.sp
+        letterSpacing = 0.sp
     ),
     labelSmall = TextStyle(
         fontFamily = JosephSans,
